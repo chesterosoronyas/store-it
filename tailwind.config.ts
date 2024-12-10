@@ -1,15 +1,16 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        brand: {
+  	extend: {
+  		colors: {
+  			brand: {
   				'100': '#EA6365',
   				DEFAULT: '#FA7275'
   			},
@@ -71,7 +72,9 @@ export default {
   			}
   		},
   		fontFamily: {
-  			poppins: ["var(--font-poppins)"]
+  			poppins: [
+  				'var(--font-poppins)'
+  			]
   		},
   		boxShadow: {
   			'drop-1': '0px 10px 30px 0px rgba(66, 71, 97, 0.1)',
@@ -96,8 +99,7 @@ export default {
   		animation: {
   			'caret-blink': 'caret-blink 1.25s ease-out infinite'
   		}
-  
-    },
+  	}
   },
   plugins:[require("tailwindcss-animate")],
 } satisfies Config;
